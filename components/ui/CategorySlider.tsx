@@ -27,15 +27,15 @@ const CategorySliderMobile = () => {
       >
         {categories.map((cat) => (
           <SwiperSlide key={cat.id} className="!w-auto my-5">
-            <div className="w-32 flex flex-col items-center py-5 px-2 gap-2 border-7 rounded-3xl border-dotted border-gray-300 cursor-pointer group">
-              <div className="relative flex flex-col gap-2 w-32 items-center rounded-xl overflow-hidden">
+            <div className="w-[77px]  flex flex-col items-center  py-4  gap-1 border-2 rounded-2xl border-dashed border-gray-300 cursor-pointer group">
+              <div className="relative flex flex-col gap-1 w-32 items-center rounded-xl overflow-hidden">
                 {cat.img ? (
                   <Image
                     src={cat.img}
                     alt={cat.label}
-                    width={60}
-                    height={60}
-                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    width={35}
+                    height={35}
+                    className="object-cover transition-transform duration-300"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center bg-gray-200">
@@ -43,7 +43,7 @@ const CategorySliderMobile = () => {
                   </div>
                 )}
               </div>
-              <span className="text-sm font-medium">{cat.label}</span>
+              <span className="text-[10px] ">{cat.label}</span>
             </div>
           </SwiperSlide>
         ))}

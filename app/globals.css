@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+.promo-banner {
+  background-image: var(--bg-mobile);
+}
+
+@media (min-width: 768px) {
+  .promo-banner {
+    background-image: var(--bg-desktop);
+  }
+}
