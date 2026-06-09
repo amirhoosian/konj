@@ -1,0 +1,120 @@
+// components/Footer.tsx
+"use client";
+
+import Link from "next/link";
+
+export default function Footer() {
+  return (
+    <footer className="bg-gray-900 text-gray-300 border-t border-gray-800">
+      <div className="container mx-auto px-4 py-12 md:py-16">
+        {/* Grid layout: 1 ستون در موبایل، 2 ستون از sm، 4 ستون از lg */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          {/* بخش کتاب‌های پیشنهادی */}
+          <div>
+            <h3 className="text-white text-lg font-bold mb-4">کتاب‌های پیشنهادی</h3>
+            <ul className="space-y-2 text-sm">
+              <li>وقتی نیچه گریست</li>
+              <li>ملت عشق</li>
+              <li>اثر مرکب</li>
+              <li>نیمه تاریک وجود</li>
+              <li>داستان نهایی</li>
+            </ul>
+          </div>
+
+          {/* بخش دسته‌بندی پیشنهادی */}
+          <div>
+            <h3 className="text-white text-lg font-bold mb-4">دسته‌بندی پیشنهادی</h3>
+            <ul className="space-y-2 text-sm">
+              <li>کتاب رایگان</li>
+              <li>کتاب صوتی</li>
+              <li>کتاب کودک</li>
+              <li>کتاب تاریخ</li>
+              <li>کتاب داستان</li>
+              <li>کتاب فلسفه</li>
+              <li>کتاب عاشقانه</li>
+              <li>تاریخ ایران</li>
+            </ul>
+          </div>
+
+          {/* بخش دانلود اپلیکیشن */}
+          <div>
+            <h3 className="text-white text-lg font-bold mb-4">دانلود اپلیکیشن</h3>
+            <div className="mb-4">
+              <p className="text-sm font-medium mb-2">نسخه موبایل</p>
+              <div className="flex flex-wrap gap-3">
+                <a href="#" className="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg text-sm transition">
+                  App Store
+                </a>
+                <a href="#" className="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg text-sm transition">
+                  Google Play
+                </a>
+              </div>
+            </div>
+            <div>
+              <p className="text-sm font-medium mb-2">نسخه دسکتاپ</p>
+              <div className="flex flex-wrap gap-3">
+                <a href="#" className="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg text-sm transition">
+                  macOS
+                </a>
+                <a href="#" className="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg text-sm transition">
+                  Windows
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* بخش لینک‌های کنج + تماس و شبکه‌های اجتماعی (ترکیبی) */}
+          <div>
+            <div className="mb-6">
+              <h3 className="text-white text-lg font-bold mb-4">کُنچ</h3>
+              <ul className="space-y-2 text-sm">
+                <li><Link href="#" className="hover:text-white transition">تماس با ما</Link></li>
+                <li><Link href="#" className="hover:text-white transition">پشتیبانی و سوالات متداول</Link></li>
+                <li><Link href="#" className="hover:text-white transition">دربارهٔ ما</Link></li>
+                <li><Link href="#" className="hover:text-white transition">حریم خصوصی</Link></li>
+                <li><Link href="#" className="hover:text-white transition">قوانین استفاده</Link></li>
+              </ul>
+            </div>
+
+            {/* اطلاعات تماس */}
+            <div className="mb-6">
+              <h4 className="text-white font-medium mb-2">پشتیبانی ۲۴ ساعته</h4>
+              <a href="tel:02145612095" className="text-sm hover:text-white transition block mb-1" dir="ltr">
+                ۰۲۱-۴۵۶۱۲۰۹۵
+              </a>
+            </div>
+
+            {/* شبکه‌های اجتماعی */}
+            <div>
+              <h4 className="text-white font-medium mb-2">کُنچ در شبکه‌های اجتماعی</h4>
+              <div className="flex gap-4">
+                <a href="#" className="hover:text-white transition" aria-label="اینستاگرام">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.309.975.975 1.247 2.242 1.309 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.309 3.608-.975.975-2.242 1.247-3.608 1.309-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.309-.975-.975-1.247-2.242-1.309-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.334-2.633 1.309-3.608.975-.975 2.242-1.247 3.608-1.309 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.332.014 7.052.072 5.197.158 3.355.519 2.036 1.838.717 3.157.356 4.999.27 6.852.014 8.132 0 8.541 0 12c0 3.459.014 3.868.072 5.148.086 1.853.447 3.695 1.766 5.014 1.319 1.319 3.161 1.68 5.014 1.766 1.28.058 1.689.072 5.148.072 3.459 0 3.868-.014 5.148-.072 1.853-.086 3.695-.447 5.014-1.766 1.319-1.319 1.68-3.161 1.766-5.014.058-1.28.072-1.689.072-5.148 0-3.459-.014-3.868-.072-5.148-.086-1.853-.447-3.695-1.766-5.014-1.319-1.319-3.161-1.68-5.014-1.766C15.868.014 15.459 0 12 0z"/>
+                    <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8z"/>
+                    <circle cx="18.406" cy="5.594" r="1.44"/>
+                  </svg>
+                </a>
+                <a href="#" className="hover:text-white transition" aria-label="تلگرام">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.063-1.226-.46-1.901-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.03.014-.144-.054-.204-.067-.06-.165-.04-.237-.023-.101.023-1.707 1.085-4.82 3.186-.456.313-.87.466-1.243.458-.409-.008-1.195-.231-1.78-.421-.718-.233-1.288-.357-1.239-.754.025-.207.312-.42.858-.636 3.177-1.385 5.297-2.298 6.36-2.738 3.029-1.257 3.658-1.475 4.069-1.482.09-.001.291.021.422.156.11.114.14.27.154.421.008.09.016.23.003.355z"/>
+                  </svg>
+                </a>
+                <a href="#" className="hover:text-white transition" aria-label="ایکس (توییتر)">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* کپی رایت و خط جداکننده */}
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">
+          <p>تمامی حقوق محفوظ است © ۱۴۰۳ کُنچ</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
